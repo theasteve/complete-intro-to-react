@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js dev --fix
+  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js dev
 
 PATH: 
   /Users/stevenaguilar/.rbenv/bin:/Users/stevenaguilar/.rvm/gems/ruby-2.2.2/bin:/Users/stevenaguilar/.rvm/gems/ruby-2.2.2@global/bin:/Users/stevenaguilar/.rvm/rubies/ruby-2.2.2/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/stevenaguilar/.rvm/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/stevenaguilar/.rvm/bin
@@ -21,7 +21,13 @@ npm manifest:
       "dev": "webpack-dev-server",
       "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
       "lint": "eslint **/*.{js,jsx} --quiet",
+      "test": "jest",
+      "test:coverage": "jest --coverage",
+      "test:update": "jest -u",
       "watch": "webpack --watch"
+    },
+    "jest": {
+       "snapshotSerializers": ["jest-serializer-enzyme"]
     },
     "dependencies": {
       "axios": "0.16.1",
@@ -5638,7 +5644,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c webpack-dev-server --fix
+  Arguments: -c webpack-dev-server
   Directory: /Users/stevenaguilar/complete-intro-to-react
   Output:
   
